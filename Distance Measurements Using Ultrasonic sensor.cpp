@@ -25,12 +25,14 @@ void loop() {
   duration = pulseIn(echoPin, HIGH);
   distance = duration * 0.0344 / 2;
   distanceInches = distance / 2.54;
-
+ distanceMeters = distanceCm / 100.0;
   Serial.print("Distance: ");
   Serial.print(distance);
   Serial.print(" cm | ");
   Serial.print(distanceInches);
   Serial.println(" inches");
+  Serial.print(distanceMeters);
+  Serial.println(" m");
 
   delay(100);
 }
