@@ -14,18 +14,13 @@ void loop() {
 
   if (val == HIGH) {          // If motion is detected
     digitalWrite(ledPin, HIGH); // Turn on LED
-
-    if (pirState == LOW) {
-      Serial.println("Motion detected!");
-      pirState = HIGH; // Update state
-    }
+    Serial.println("Motion detected!");
+      
 
   } else {
     digitalWrite(ledPin, LOW); // Turn off LED
-
-    if (pirState == HIGH) {
       Serial.println("Motion ended!");
-      pirState = LOW; // Update state
+      
     }
   }
 
